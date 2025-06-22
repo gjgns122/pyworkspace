@@ -1,12 +1,38 @@
-import turtle as t
+# 처음 만드는 윈도우
+from tkinter import *  #'*'-모든 클래스, 함수
 
-t.forward(100)
-t.right(90)
-t.forward(100)
-t.right(90)
-t.forward(100)
-t.right(90)
-t.forward(100)
-t.right(90)
-t.left(90)
+"""
+def click():
+  print("안녕~ 파이썬!")
 
+root = Tk() #Tk 클래스의 인스턴스 생성
+root.title("첫 윈도우")
+root.geometry("250x80")  #너비-100pixel, 높이-50p
+
+# 라벨 생성
+# pack() - 가운데 배치(한 줄을 차지함)
+Label(root, text="Hello~ Python!!").pack()
+
+# 버튼 생성
+# command - 함수에 명령을 내림
+Button(root, text="확인", command=click).pack()
+
+#출력 레이블 생성
+lbl_result=label(root)
+lb1_result.pack()
+
+root.mainloop()
+"""
+
+#레이 아웃(배치) -grid() 함수
+window=Tk()
+window.title("배치-grid")
+window.geometry("300x200")
+#grid(행,열)
+#sticky=e(동쪽),w(서쪽)
+Label(window,text="오늘도 좋은하루 되세요!",font=("돋움",13)).grid(row=0,column=0)
+Button(window,text="동",width=5,height=2).grid(row=1,column=0,sticky=E)
+Button(window,text="서",width=5,height=2).grid(row=1,column=0,sticky=W)
+Button(window,text="북",width=5,height=2).grid(row=2,column=0,sticky=N)
+Button(window,text="남",width=5,height=2).grid(row=3,column=0,sticky=S)
+window.mainloop()
